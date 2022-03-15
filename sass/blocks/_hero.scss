@@ -1,0 +1,221 @@
+.hero {
+    background: {
+        image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url('../../img/usta.jpg');
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+
+    padding-top: 120px;
+    padding-bottom: 45px;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        margin: 0;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 67px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $main-white;
+    }
+
+    &__text {
+        max-width: 537px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        color: $main-white;
+        opacity: 0.8;
+    }
+
+    &__btn {
+        margin: 0;
+        margin-bottom: 200px;
+
+        padding: {
+            top: 22px;
+            bottom: 22px;
+            left: 56px;
+            right: 49px;
+        }
+
+        border: none;
+        color: $main-white;
+        background-color: $main-brown;
+        box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        transition: 0.25s;
+
+        &:hover {
+            background-color: #cc9654;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    &__btn-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:first-child {
+            margin-right: 25px;
+        }
+    }
+
+    &__arrow-right {
+        transform: rotate(180deg);
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid $main-white;
+        color: $main-white;
+        font-family: 'Lato';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        opacity: 0.3;
+        cursor: pointer;
+        transition: all 230ms ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero {
+        background-position: top;
+        background-size: 1400px 100%;
+
+        &__heading {
+            margin-bottom: 20px;
+            font-size: 56px;
+            line-height: 67px;
+        }
+
+        &__text {
+            max-width: 537px;
+            margin-bottom: 50px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        &__btn {
+            margin-bottom: 120px;
+        }
+
+        &__arrow {
+            width: 20px;
+            height: 1px;
+        }
+
+        &__bottom {
+            padding-top: 41px;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .hero {
+        background-size: 1000px 687px;
+
+        &__heading {
+            font-size: 56px;
+            line-height: 67px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        &__number {
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .hero {
+        padding-top: 70px;
+        padding-bottom: 15px;
+
+        &__container {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        &__heading {
+            margin-bottom: 28px;
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        &__text {
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 23px;
+        }
+
+        &__btn {
+            width: 300px;
+            margin-bottom: 62px;
+        }
+
+        &__bottom {
+            display: flex;
+            justify-content: center;
+            padding-top: 15px;
+        }
+
+        &__btn-wrapper {
+            display: none;
+        }
+    }
+}

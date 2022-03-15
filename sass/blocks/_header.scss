@@ -1,0 +1,267 @@
+.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo-img {
+        display: block;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        color: $main-black;
+        transition: all 230ms linear;
+
+        &:hover {
+            color: $main-brown;
+        }
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            margin-right: 63px;
+        }
+    }
+
+    &__social:first-child {
+        margin-right: 15px;
+    }
+
+    &__tel {
+        display: flex;
+        align-items: center;
+        font-family: 'Lato';
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $main-gray;
+        text-decoration: none;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            margin-right: 7px;
+
+            background: {
+                image: url('../../img/tel.svg');
+                repeat: no-repeat;
+                size: auto;
+            }
+        }
+    }
+
+    &__close {
+        display: none;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__btn {
+        display: none;
+        padding: 0;
+    }
+
+    &__menu {
+        display: none;
+    }
+
+    &__shtor {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .header {
+
+        &__right-wrapper {
+            margin-right: 51px;
+        }
+
+        &__link:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .header {
+
+        &__right-wrapper {
+            margin-right: 50px;
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__social:first-child {
+            margin-right: 13px;
+        }
+
+        &__btn {
+            display: block;
+            border: none;
+            background-color: transparent;
+            margin-top: 3px;
+            margin-left: 50px;
+        }
+
+        //menu
+        &__menu {
+            position: absolute;
+            right: 0;
+            top: 90px;
+            background-color: $main-white;
+            width: 320px;
+            height: 689.5px;
+
+            padding: {
+                top: 30px;
+                left: 26px;
+            }
+
+            z-index: 1000;
+            transition: all 280ms linear;
+        }
+
+        &__btn.burger--off {
+            visibility: hidden;
+        }
+
+        &__close {
+            display: block;
+            position: absolute;
+            right: 31px;
+            top: -57px;
+        }
+
+
+        &__logo--menu {
+            display: none;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        &__shtor {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 92px;
+            bottom: 0;
+            height: 687.5px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3));
+            z-index: 100;
+        }
+
+        .shtor--on {
+            display: block;
+        }
+
+        &__phone {
+            display: none;
+        }
+
+        &__socials {
+            display: none;
+        }
+
+        .btn__menu {
+            display: none;
+        }
+
+        &__menu.is-active {
+            display: block;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .header {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        &__container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        &__right-wrapper {
+            display: none;
+        }
+
+        &__tel {
+            display: none;
+        }
+
+        &__menu {
+            top: 82px;
+            height: auto;
+            padding-left: 10px;
+            padding-top: 40px;
+            padding-bottom: 10px;
+        }
+
+        &__close {
+            right: 18px;
+        }
+
+        &__link:last-child {
+            margin-bottom: 40px;
+        }
+
+        &__socials {
+            display: flex;
+            margin-bottom: 130px;
+        }
+
+        &__phone {
+            display: flex;
+            margin-bottom: 31px;
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        .btn__menu {
+            display: block;
+            margin-bottom: 0;
+        }
+
+        &__shtor.shtor--on {
+            display: none;
+        }
+    }
+}

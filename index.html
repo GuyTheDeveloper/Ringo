@@ -5,9 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Sass template</title>
+    <title>Ringo web site</title>
 </head>
 <body>
-    <h1 class="visually-hidden">Hello World!</h1>
+    <header class="header">
+        <div class="container header__container header__desktop">
+            <a class="header__logo" href="index.html">
+                <img class="header__logo-img" src="./img/logo.svg" width="122" height="53" alt="Ringo web site logo">
+            </a>
+            
+            <nav class="header__nav">
+                <a class="header__link" href="#">Напрямки</a>
+                <a class="header__link" href="#">Про компанію</a>
+                <a class="header__link" href="#">Переваги</a>
+                <a class="header__link" href="#">Етапи роботи</a>
+            </nav>
+            
+            <div class="header__right">
+                <div class="header__right-wrapper">
+                    <a class="header__social" href="#">
+                        <img src="./img/inst.svg" width="24" height="24" alt="Instagram">
+                    </a>
+                    <a class="header__social" href="#">
+                        <img src="./img/fcbk.svg" width="10" height="21" alt="Facebook inc">
+                    </a>
+                </div>
+                
+                <a class="header__tel" href="tel:380676615415">+380 67661 5415</a>
+                
+                <button class="header__btn">
+                    <img src="./img/menu.svg" width="34" height="34" alt="menu">
+                </button>
+
+                <!-- <button class="header__brg"><span class="header__hamburger"></span></button> -->
+            </div>
+            
+            <div class="header__menu">
+                <a class="header__logo header__logo--menu" href="#">
+                    <img src="./img/logo.svg" width="122" height="53" alt="Ringo official logo">
+                </a>
+                
+                <button class="header__close"><img src="./img/close.svg" width="24" height="24" alt="Close"></button>
+                
+                <nav class="header__nav nav">
+                    <a class="header__link" href="#">Напрямки</a>
+                    <a class="header__link" href="#">Про компанію</a>
+                    <a class="header__link" href="#">Переваги</a>
+                    <a class="header__link" href="#">Етапи роботи</a>
+                </nav>
+
+                <div class="header__right-wrapper header__socials">
+                    <a class="header__social" href="#">
+                        <img src="./img/inst.svg" width="24" height="24" alt="Instagram">
+                    </a>
+                    <a class="header__social" href="#">
+                        <img src="./img/fcbk.svg" width="10" height="21" alt="Facebook inc">
+                    </a>
+                </div>
+
+                <a class="header__tel header__phone" href="tel:380676615415">+380 67661 5415</a>
+
+                <button class="hero__btn btn__menu">Обговорити проект</button>
+            </div>
+
+            <div class="header__shtor"></div>
+        </div>
+    </header>
+    
+    <main class="main">
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero-wrapper">
+                    <h1 class="hero__heading">виробництво<br class="hero__Br">меблів</h1>
+                    <p class="hero__text">Ми виконуємо комплексне виготовлення корпусних меблів для житлових і комерційних приміщень, забезпечимо Вас якісним меблевим продуктом власного виробництва. </p>
+                    <button class="hero__btn">Обговорити проект</button>
+                </div>
+                
+                <div class="hero__bottom">
+                    <div class="hero__btn-wrapper">
+                        <button class="hero__arrow"><img src="./img/strlkl.svg" width="21" height="16" alt="Arrow to left"></button>
+                        <button class="hero__arrow hero__arrow-right"><img src="./img/strlkl.svg" width="21" height="16" alt="Arrow to right"></button>
+                    </div>
+                    
+                    <div class="hero__right">
+                        <button class="hero__number">1</button>
+                        <button class="hero__number">2</button>
+                        <button class="hero__number">3</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+    
+    <script src="./js/main.js"></script>
+    
 </body>
 </html>
