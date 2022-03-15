@@ -14,3 +14,6 @@ close.addEventListener('click', () => {
     crtn.classList.remove('shtor--on');
     burger.classList.remove('burger--off');
 })
+
+console.log('Helloo World!,');
+console.log('Goodbye World');
